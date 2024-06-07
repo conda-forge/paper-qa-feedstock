@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "4.6.1" %}
+{% set version = "4.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: 03b89bf1be95b96710f4616a079f83a5d635d39eef7172afbf37a1762d2ff561
+  sha256: 512f6fe6ccadfb8755d084c2350a263a73b5afc25f0c180edc339f031d15295b
 
 build:
   noarch: python
