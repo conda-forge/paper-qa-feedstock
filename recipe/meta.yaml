@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "4.8.1" %}
+{% set version = "4.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: ebbe010de298bca8e30add53a3f62141849b843b074fc4b776fbab7b98041524
+  sha256: b0ff64e68b35ccc9af10daa3e8f9a45449a61b66cbbb243bd3f3a21245f50699
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - html2text
     - numpy
     - openai >=1
-    - pydantic >=2
+    - pydantic >=2.0,<3.dev0
     - pypdf
     - tiktoken >=0.4.0
 
