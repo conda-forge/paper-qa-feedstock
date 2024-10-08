@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "5.0.10" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: c9713c1f1a09868d113546491aad6d7aeaf946068e38bbbf6ddaefd1e32236a6
+  sha256: fd6fe10b89dccb1b5002fc254fe25d49b09f1d2ca82e4e942ff8e8441ac263f3
 
 build:
   noarch: python
@@ -20,6 +20,8 @@ requirements:
     - setuptools >=62.6.0
     - pip
   run:
+    - coredis
+    - limits
     - aiohttp
     - anyio
     - fhaviary >=0.6
