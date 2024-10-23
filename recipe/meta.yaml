@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "5.3.0" %}
+{% set version = "5.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: 9138932dd198dce8ff9a1cb26c8032281002d9445b054f2f3af00ae2697f40bc
+  sha256: d16a79822c16ea1e28f6fa72aee3fdf070d0327b3ff42c1030a56cddbe7ebd8e
 
 build:
   noarch: python
@@ -28,8 +28,8 @@ requirements:
     - httpx
     - litellm >=1.44
     - pybtex
-    - pydantic-settings
-    - pymupdf >=1.24.3
+    - pydantic-settings <2.6
+    - pymupdf >=1.24.12
     - rich
     - setuptools
     - tantivy
