@@ -1,13 +1,13 @@
 {% set name = "paper-qa" %}
-{% set version = "5.5.0" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: fe9658c3238be95bfe49927efaf4ebec7aa3a5e0917b34418942f2d9fb12f44f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
+  sha256: 2a4a458e31ef77dbb42192d7bd2f38405ad8e8e31db046b495555fc7b6f49c82
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - limits
     - aiohttp
     - anyio
-    - fhaviary >=0.10.0
+    - fhaviary >=0.10.2
     - httpx
     - litellm >=1.44
     - pybtex
@@ -39,7 +39,7 @@ requirements:
     - html2text
     - numpy
     - openai <1.47
-    - pydantic >=2.0,<3.dev0
+    - pydantic >=2.0,<3.dev0,>=2.10.1
     - pypdf
     - tiktoken >=0.4.0
 
