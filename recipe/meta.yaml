@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "5.8.0" %}
+{% set version = "5.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: 2898a6446e5574ccd6b05ca950ef141efdfa9ed5664b3028adc51ccb078f9fe8
+  sha256: 861b8606004bd3873fe6f9e39ea18d19d9cb6d8f543cdf3a1ce7818b567d264b
 
 build:
   noarch: python
@@ -20,11 +20,12 @@ requirements:
     - setuptools >=62.6.0
     - pip
   run:
+    - fh-llm-client >=0.0.3
     - coredis
     - limits
-    - aiohttp
+    - aiohttp >=3.10.6
     - anyio
-    - fhaviary >=0.10.2
+    - fhaviary >=0.14
     - httpx
     - litellm >=1.44
     - pybtex
