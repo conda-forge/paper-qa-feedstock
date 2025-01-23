@@ -1,5 +1,6 @@
 {% set name = "paper-qa" %}
-{% set version = "5.10.2" %}
+{% set version = "5.11.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: b3127e5b07435574e103d34a358e1a4a4f7da4c4c76825383533e257c71fb10a
+  sha256: 4448891585b7fabda0dcde5ebd963d8d018ea851e0c5b187b3eab4af7618bcc0
 
 build:
   noarch: python
@@ -16,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python ={{ python_min }}
     - setuptools >=62.6.0
     - pip
   run:
@@ -35,7 +36,7 @@ requirements:
     - setuptools
     - tantivy
     - tenacity
-    - python >=3.8
+    - python >={{ python_min }}
     - pycryptodome
     - html2text
     - numpy
@@ -51,6 +52,7 @@ test:
     - pip check
   requires:
     - pip
+    - python ={{ python_min }}
 
 about:
   summary: LLM Chain for answering questions from docs
