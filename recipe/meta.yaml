@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "5.13.0" %}
+{% set version = "5.14.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: 14201657c8aa3a724eb95217a7d88884f7a0a48066261b8410ff0335722b04ce
+  sha256: cc49f4ee86e0861475ac7c1c18c449911c24940a8b6e1315dd0f9a52a7626284
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools >=62.6.0
     - pip
   run:
+    - fhlmi
     - fh-llm-client <0.1.0
     - coredis
     - limits
