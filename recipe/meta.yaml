@@ -18,18 +18,15 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=62.6.0
+    - setuptools >=64
+    - setuptools-scm >=8
     - pip
   run:
     - fhlmi
-    - fh-llm-client <0.1.0
-    - coredis
-    - limits
     - aiohttp >=3.10.6
     - anyio
     - fhaviary >=0.18.2
     - httpx
-    - litellm >=1.44
     - pybtex
     - pydantic-settings
     - pymupdf >=1.24.12
@@ -38,12 +35,9 @@ requirements:
     - tantivy
     - tenacity
     - python >={{ python_min }}
-    - pycryptodome
     - html2text
     - numpy
-    - openai <1.47
     - pydantic >=2.0,<3.dev0,>=2.10.1
-    - pypdf
     - tiktoken >=0.4.0
 
 test:
