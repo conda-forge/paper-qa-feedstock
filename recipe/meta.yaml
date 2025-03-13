@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "5.17.0" %}
+{% set version = "5.18.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: a02c65abb779463b256d688116151322a201dcd7cbdf26e7fcb408fdc46d3794
+  sha256: 6f3d1ebb98ba32e7defb0e22e8c1012c7b1de89b7e24140c54439ba45c1b5269
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
-    - fhlmi
+    - fhlmi >=0.25.4
     - aiohttp >=3.10.6
     - anyio
     - fhaviary >=0.18.2
