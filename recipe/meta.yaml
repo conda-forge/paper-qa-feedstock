@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "5.29.1" %}
+{% set version = "2025.12.17" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: c7c6b5403867d3c8b147d25053d4083cc9979152476fd8a535b7a3257e7b68fa
+  sha256: eb907197e72cc8e729ef94b3871962df7c04b51d437558063efc1ee9ab2188c0
 
 build:
   noarch: python
@@ -22,11 +22,12 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
+    - httpx-aiohttp
     - paper-qa-pypdf
-    - fhlmi >=0.25.4
+    - fhlmi >=0.41.0,<33
     - aiohttp >=3.10.6
     - anyio
-    - fhaviary >=0.20
+    - fhaviary >=0.27
     - httpx
     - pybtex
     - pydantic-settings
