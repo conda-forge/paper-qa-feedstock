@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "2025.12.17" %}
+{% set version = "2025.12.19" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: eb907197e72cc8e729ef94b3871962df7c04b51d437558063efc1ee9ab2188c0
+  sha256: d6b80b10b31b5979b30aa5dfc12e12f238b6fb4b44a53276d4c3272a38103e7c
 
 build:
   noarch: python
