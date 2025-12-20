@@ -24,7 +24,7 @@ requirements:
   run:
     - httpx-aiohttp
     - paper-qa-pypdf
-    - fhlmi >=0.41.0.<33
+    - fhlmi >=0.41.0,<33
     - aiohttp >=3.10.6
     - anyio
     - fhaviary >=0.27
