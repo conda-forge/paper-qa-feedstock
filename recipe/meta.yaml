@@ -1,5 +1,5 @@
 {% set name = "paper-qa" %}
-{% set version = "2026.3.18" %}
+{% set version = "2026.8.12" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
-  sha256: e036802bb794b6b16b682b047a5ad1413ca653370452ead3d0a9a83a66fb9761
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/paper_qa-{{ version }}.tar.gz
+  sha256: 1120a4d233bb319477d07a62b5384d73beaa95c1cda31ed022804d27a16c23c4
 
 build:
   noarch: python
